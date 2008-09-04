@@ -1,0 +1,8 @@
+%tr
+  %th.label
+    %label{:for=>"needs_help"} Inline Help
+  %td.field
+    %span.checkbox
+      = check_box "user", "needs_help" 
+      %label{:for=>"needs_help"} Show me help
+  %td.help Optional. When checked, this will include help documentation in the application interface.
