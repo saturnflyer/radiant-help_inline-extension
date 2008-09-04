@@ -1,3 +1,8 @@
 = Help Inline
 
-Description goes here
+Help Inline provides a new setting for every user: 'needs_help'.
+
+When this is selected for the current user, help documentation will be 
+injected into the Radiant interface.
+
+Built by Saturn Flyer http://www.saturnflyer.com
