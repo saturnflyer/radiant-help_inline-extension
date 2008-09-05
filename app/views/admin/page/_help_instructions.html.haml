@@ -1,5 +1,4 @@
+- include_stylesheet 'admin/help'
 - if current_user.needs_help
-  %p You've got your 'Inline Help' preference turned on. This means that as you edit pages, you'll be provided with some helpful information about the various features of the interface.
-  %p 
-    You may, at any time
-    = link_to('turn off this help', admin_user_toggle_inline_help_path(current_user), :method => :put)
+  #help_introduction
+    %p= "You've got your 'Inline Help' #{link_to("preference", user_edit_path(current_user))} turned on. You may, at any time #{link_to('turn off this help.', admin_user_toggle_inline_help_path(current_user), :method => :put)}"

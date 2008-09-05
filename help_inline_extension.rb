@@ -17,7 +17,8 @@ class HelpInlineExtension < Radiant::Extension
         redirect_to :back
       end
     }
-    admin.page.edit.add :main, 'help_instructions', :before => 'edit_header'
+    admin.page.index.add :top, 'help_instructions'
+    admin.page.index.add :top, 'index_instructions'
     admin.user.edit.add :form, 'needs_help', :after => 'edit_notes'
   end
   
