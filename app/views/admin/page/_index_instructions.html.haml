@@ -2,4 +2,5 @@
   #page_index_help.help_tip
     - some_page_title = Page.find(:first, :offset => 3).title
     %p= "The list of pages below shows your site according to its heirarchy. The pages in your site are in a 'parent/child' relationship, so if you want to add a page under #{some_page_title}, you would simply click the <code>Add Child</code> link in the 'Modify' column and you'll be adding a new page in the following screen."
-    %p To see the children of any given page, click on the '+' icon to the left of each page title
+    %p To see the children of any given page, click on the '+' icon to the left of each page title.
+    %p If you remove a page, by clicking the <code>Remove</code> button, you will be taken to a confirmation screen where (when confirmed) you well remove that page and all of it's children

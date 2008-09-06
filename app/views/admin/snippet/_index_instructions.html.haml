@@ -1,0 +1,7 @@
+- if current_user.needs_help
+  .help_tip
+    %p Snippets can be used in many ways. For example, you may have several different layouts that place common elements in different areas. Rather than type the same code in each layout, you may create a snippet and then simply include the snippet in each layout
+    %p Snippets will only show up where you put them. So creating a Snippet won't affect your site in any way until you do someting with it. How do you use them? Simply type <code>&lt;r:snippet name="my_snippet" /&gt;</code> in a page, layout, or even another snippet.
+    - if admin.respond_to?(:help)
+      - developer_help do
+        %p= "You can read more about tags that can be helpful when writing snippets in the #{link_to "Help documentation for developers", help_role_url(:developer)}."

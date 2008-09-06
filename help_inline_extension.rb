@@ -1,6 +1,3 @@
-# Uncomment this if you reference any of your controllers in activate
-# require_dependency 'application'
-
 class HelpInlineExtension < Radiant::Extension
   version "1.0"
   description "Adds inline Help to the Radiant interface"
@@ -17,13 +14,15 @@ class HelpInlineExtension < Radiant::Extension
         redirect_to :back
       end
     }
+    ActionController::Base.class_eval{ include HelpInline::ApplicationExt }
     admin.page.index.add :top, 'help_instructions'
     admin.page.index.add :top, 'index_instructions'
     admin.user.edit.add :form, 'needs_help', :after => 'edit_notes'
+    
+    admin.snippet.index.add :top, 'index_instructions'
   end
   
   def deactivate
-    # admin.tabs.remove "Help Inline"
   end
   
 end
