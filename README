@@ -3,6 +3,7 @@
 Help Inline provides a new setting for every user: 'needs_help'.
 
 When this is selected for the current user, help documentation will be 
-injected into the Radiant interface.
+injected into the Radiant interface. This requires that application_theme be installed.
+See http://github.com/saturnflyer/radiant-application_theme-extension/tree/master
 
 Built by Saturn Flyer http://www.saturnflyer.com

@@ -1,12 +1,7 @@
 module HelpInline::ApplicationExt
-  def self.included(base)
-    base.class_eval {
-      before_filter :add_inline_help_files
-    }
-  end
-  
+  ApplicationController.methods_after_set_javascripts_and_stylesheets << :add_inline_help_files
+
   def add_inline_help_files
-    @stylesheets ||= []
     @stylesheets << 'admin/help'
   end
 end

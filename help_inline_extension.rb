@@ -14,12 +14,16 @@ class HelpInlineExtension < Radiant::Extension
         redirect_to :back
       end
     }
-    ActionController::Base.class_eval{ include HelpInline::ApplicationExt }
+    ApplicationController.class_eval{ include HelpInline::ApplicationExt }
     admin.page.index.add :top, 'help_instructions'
     admin.page.index.add :top, 'index_instructions'
     admin.user.edit.add :form, 'needs_help', :after => 'edit_notes'
     
-    admin.snippet.index.add :top, 'index_instructions'
+    if admin.snippet.index.respond_to?(:replace)
+      admin.snippet.index.replace :top, 'index_instructions'
+    else
+      admin.snippet.index.add :top, 'index_instructions'
+    end
   end
   
   def deactivate
