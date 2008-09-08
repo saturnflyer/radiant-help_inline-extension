@@ -1,0 +1,4 @@
+- if current_user.needs_help
+  .help_tip
+    %p By default, a Developer may do anything that an Administrator may do, with the exception of creating and editing users.
+    = render :partial => 'admin/help/help_tip_controls'

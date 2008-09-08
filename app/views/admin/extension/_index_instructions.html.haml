@@ -1,0 +1,5 @@
+- if current_user.needs_help
+  .help_tip
+    %p Extensions are parts of the application that add additional functionality. The additional functionality may not be apparent to the average user. Some extensions may add a new section to the interface, while others may alter the default functionality.
+    %p To find out about these and other extensions, visit <a href="http://ext.radiantcms.org">ext.radiantcms.org</a>
+    = render :partial => 'admin/help/help_tip_controls'

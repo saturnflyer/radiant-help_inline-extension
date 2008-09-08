@@ -1,0 +1,8 @@
+- if current_user.needs_help
+  .help_tip
+    %p Users may fall into 3 categories: Adminsitrator, Developer, and regular. Depending on a user's role he or she will be able to access separate areas of the site. Layouts, for example, are not accessible by regular users.
+    %p Click on a user's name below to edit the user, or add a new one with the <code>New User</code> button. When you <code>Remove</code> a user, he or she will no longer have any access to the administration of your site.
+    - if admin.respond_to?(:help)
+      - admin_help do
+        %p= "You can read more about tags that can be helpful when writing snippets in the #{link_to "Help documentation for admins", help_role_url(:admin)}."
+    = render :partial => 'admin/help/help_tip_controls'

@@ -5,3 +5,4 @@
     - if admin.respond_to?(:help)
       - developer_help do
         %p= "You can read more about tags that can be helpful when writing snippets in the #{link_to "Help documentation for developers", help_role_url(:developer)}."
+    = render :partial => 'admin/help/help_tip_controls'

@@ -6,4 +6,6 @@ When this is selected for the current user, help documentation will be
 injected into the Radiant interface. This requires that application_theme be installed.
 See http://github.com/saturnflyer/radiant-application_theme-extension/tree/master
 
+See HELP_admin.md and HELP_developer.md for more details.
+
 Built by Saturn Flyer http://www.saturnflyer.com
