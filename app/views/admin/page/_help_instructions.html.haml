@@ -1,3 +1,0 @@
-- if current_user.needs_help
-  #help_introduction
-    %p= "You've got your 'Inline Help' #{link_to("preference", user_edit_path(current_user))} turned on. You may, at any time, #{link_to('turn off this help.', admin_user_toggle_inline_help_path(current_user), :method => :put)}"

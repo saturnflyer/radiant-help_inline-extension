@@ -8,7 +8,7 @@ class HelpInlineExtension < Radiant::Extension
   end
   
   def activate
-    Admin::UserController.class_eval {
+    Admin::UsersController.class_eval {
       def toggle_inline_help
         current_user.update_attribute(:needs_help, !current_user.needs_help)
         redirect_to :back
@@ -26,6 +26,10 @@ class HelpInlineExtension < Radiant::Extension
       admin.snippet.index.replace :top, 'index_instructions'
     else
       admin.snippet.index.add :top, 'index_instructions'
+    end
+    
+    if admin.respond_to?(:dashboard)
+      admin.dashboard.index.add :main, 'dashboard_instructions', :before => 'draft_pages'
     end
   end
   

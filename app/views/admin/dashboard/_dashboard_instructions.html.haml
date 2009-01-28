@@ -1,0 +1,4 @@
+- if current_user.needs_help
+  .help_tip
+    %p Your Dashboard displays recent activity in the system. It doesn't show everything, just the few most recent changes that occurred.
+    = render :partial => 'admin/help/help_tip_controls'
