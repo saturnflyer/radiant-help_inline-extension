@@ -6,6 +6,9 @@ When this is selected for the current user, help documentation will be
 injected into the Radiant interface. This requires that application_theme be installed.
 See http://github.com/saturnflyer/radiant-application_theme-extension/tree/master
 
+Tag radiant069 (f71b1a102f3a81a90f30c06118c9e07604fec544) is the last version compatible
+with Radiant version 0.6.9
+
 See HELP_admin.md and HELP_developer.md for more details.
 
 Built by Saturn Flyer http://www.saturnflyer.com
