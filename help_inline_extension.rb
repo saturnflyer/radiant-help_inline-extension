@@ -4,7 +4,7 @@ class HelpInlineExtension < Radiant::Extension
   url "http://saturnflyer.com"
   
   define_routes do |map|
-    map.admin_user_toggle_inline_help 'admin/users/:id/toggle_inline_help', :controller => 'admin/user', :action => 'toggle_inline_help', :conditions => {:method => :put}
+    map.admin_user_toggle_inline_help 'admin/users/:id/toggle_inline_help', :controller => 'admin/users', :action => 'toggle_inline_help', :conditions => {:method => :put}
   end
   
   def activate
