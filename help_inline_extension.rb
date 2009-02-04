@@ -20,6 +20,7 @@ class HelpInlineExtension < Radiant::Extension
     admin.user.index.add :top, 'index_instructions'
     admin.user.edit.add :form_top, 'edit_instructions'
     admin.user.edit.add :form, 'needs_help', :after => 'edit_notes'
+    admin.user.preferences.add :form, 'admin/users/needs_help'
     admin.extension.index.add :top, 'index_instructions'
     
     if admin.snippet.index.respond_to?(:replace)
